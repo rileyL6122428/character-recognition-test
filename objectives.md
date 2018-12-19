@@ -5,5 +5,11 @@
     - [x] utils for rendering serialized data
     - [x] report on data
 
-    - [ ] produce sdk classifier
+    - [x] separate test from training data
+    
+    - [x] produce sgd classifier
+    - [ ] rate sgd classifier
+    - [ ] rate performance
+    
+    - [ ] find hyperparameters for top 5 classifiers
     - [ ] produce pipeline for creating classifier and ranking it's performance
