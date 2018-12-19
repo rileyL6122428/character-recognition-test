@@ -6,11 +6,14 @@
     - [x] report on data
 
     - [x] separate test from training data
+    - [ ] feature scale/normalize data
     
     - [x] produce sgd classifier
     - [x] rate sgd classifier
 
-    - [ ] produce aggregate decision tree
+    - [x] produce random forest classifier
+
+    - [ ] produce neural network classifier
     
     - [ ] find hyperparameters for top 5 classifiers
     - [ ] produce pipeline for creating classifier and ranking it's performance
