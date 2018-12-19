@@ -8,8 +8,9 @@
     - [x] separate test from training data
     
     - [x] produce sgd classifier
-    - [ ] rate sgd classifier
-    - [ ] rate performance
+    - [x] rate sgd classifier
+
+    - [ ] produce aggregate decision tree
     
     - [ ] find hyperparameters for top 5 classifiers
     - [ ] produce pipeline for creating classifier and ranking it's performance
