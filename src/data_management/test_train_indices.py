@@ -10,3 +10,5 @@ for train_split, test_split in splitter.split(flat_images, number_classes):
     test_indices_placeholder = test_split
 
 train_indices, test_indices = train_indices_placeholder, test_indices_placeholder
+
+train_subset_indices = train_indices[:5000]
