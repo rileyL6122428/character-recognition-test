@@ -4,7 +4,7 @@ from data_management.train_set import flat_images, number_classes, images_28_by_
 from data_management.adapters import to_character
 from data_visualization.render_character import render_in_terminal
 from sklearn.model_selection import cross_val_predict
-from sklearn.metrics import precision_score, recall_score, confusion_matrix
+from sklearn.metrics import precision_score, recall_score, f1_score, confusion_matrix
 
 sgd_classifier = SGDClassifier(random_state=42)
 
