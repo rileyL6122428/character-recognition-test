@@ -4,7 +4,6 @@ from data_prep.sharpen_images_transformer import SharpenImageTransformer
 from data_prep.normalize_grayscale_transformer import NormalizeGrayscaleTransformer
 from data_management.train_subset import flat_images, number_classes
 from sklearn.model_selection import GridSearchCV
-from functools import partial
 from scoring.f1_for_grid_sv import f1_score_multi_class
 
 grid_search = GridSearchCV(
@@ -65,8 +64,8 @@ print('best_params_ = ', grid_search.best_params_)
 #     'sgd_classifier__eta0': 0.001,
 #     'sgd_classifier__learning_rate': 'constant',
 #     'sgd_classifier__tol': 0.0001,
-#     'sharpen_images__darken_threshold': None,
-#     'sharpen_images__whiten_threshold': None
+#     'sharpen_images__darken_threshold': 50,
+#     'sharpen_images__whiten_threshold': 50
 # } 
 
 print('best_score_ = ', grid_search.best_score_)

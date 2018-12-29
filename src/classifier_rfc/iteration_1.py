@@ -26,3 +26,4 @@ average_precision = precision_score(
 
 print('average precision = ', average_precision)  # 0.8249868333239829
 print('average recall = ', average_recall)  # 0.823133484162896
+# f1 = 0.82405911667

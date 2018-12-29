@@ -22,3 +22,4 @@ print('STATS WITH NO HYPER PARAMETER TUNING')
 print('* 5 Cross Validation Folds')
 print('* avg precision score = ', avg_precision_score)  # 0.5584353509972628
 print('* avg recall score = ', avg_recall_score)  # 0.528393665158371
+# f1_score = 0.54299930804
