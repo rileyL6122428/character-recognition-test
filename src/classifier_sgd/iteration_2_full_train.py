@@ -25,32 +25,7 @@ sgd_classifier = Pipeline([
     ))
 ])
 
-class_predictions = cross_val_predict(
-    sgd_classifier,
-    flat_images,
-    y=number_classes,
-    cv=5,
-    verbose=10,
-    n_jobs=2
-)
-
-avg_precision_score = precision_score(
-    number_classes,
-    class_predictions,
-    average='macro'
-)
-
-avg_recall_score = recall_score(
-    number_classes,
-    class_predictions,
-    average='macro'
-)
-
-print('avg_precision_score = ', avg_precision_score)
-# 0.691165162976833
-print('avg_recall_score = ', avg_recall_score)
-# 0.69348604826546
-# F1 = 0.69232366054
+sgd_classifier.fit(flat_images, number_classes)
 
 joblib.dump(
     sgd_classifier,
