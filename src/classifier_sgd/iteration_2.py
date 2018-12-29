@@ -4,19 +4,8 @@ from data_prep.sharpen_images_transformer import SharpenImageTransformer
 from data_prep.normalize_grayscale_transformer import NormalizeGrayscaleTransformer
 from data_management.train_subset import flat_images, number_classes
 from sklearn.model_selection import GridSearchCV
-from sklearn.metrics import f1_score
-import pdb
 from functools import partial
-
-def f1_score_multi_class(estimator, X, y):
-    predictions = estimator.predict(X)
-
-    return f1_score(
-        y,
-        predictions,
-        average='macro'
-    )
-
+from scoring.f1_for_grid_sv import f1_score_multi_class
 
 grid_search = GridSearchCV(
     Pipeline([
