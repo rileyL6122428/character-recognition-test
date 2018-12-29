@@ -50,6 +50,7 @@ print('avg_precision_score = ', avg_precision_score)
 # 0.691165162976833
 print('avg_recall_score = ', avg_recall_score)
 # 0.69348604826546
+# F1 = 0.69232366054
 
 joblib.dump(
     sgd_classifier,
