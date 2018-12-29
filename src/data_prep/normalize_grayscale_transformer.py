@@ -2,8 +2,8 @@ from data_management.adapters import normalize_image_0_to_1
 
 class NormalizeGrayscaleTransformer:
 
-    def __init__(self, **params):
-        self.set_params(params)
+    def __init__(self, is_on=True):
+        self.set_params(is_on=is_on)
 
     def fit(self, X, y=None):
         return self
