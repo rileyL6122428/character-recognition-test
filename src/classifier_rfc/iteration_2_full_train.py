@@ -21,29 +21,7 @@ rfc_classifier = Pipeline([
     ))
 ])
 
-class_predictions = cross_val_predict(
-    rfc_classifier,
-    flat_images,
-    number_classes,
-    cv=5,
-    n_jobs=2,
-    verbose=10
-)
-
-average_recall = recall_score(
-    number_classes,
-    class_predictions,
-    average='macro'
-)
-
-average_precision = precision_score(
-    number_classes,
-    class_predictions,
-    average='macro'
-)
-
-print('average precision = ', average_precision) 
-print('average recall = ', average_recall)  
+rfc_classifier.fit(flat_images, number_classes)
 
 joblib.dump(
     rfc_classifier,
