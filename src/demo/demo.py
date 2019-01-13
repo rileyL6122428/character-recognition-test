@@ -1,33 +1,13 @@
 from PIL import Image
 import numpy
-import pdb
 from data_visualization.render_character import render_with_pyplot
 from classifier_mlp.iteration_2_load_clf import mlp_classifier
 from classifier_rfc.iteration_2_load_clf import rfc_classifier
 from classifier_sgd.iteration_2_load_clf import sgd_classifier
 from data_management.adapters import to_character
 from sklearn.metrics import recall_score, precision_score
+from demo_adapters import as_28_by_28, as_grayscale_list, flatten
 
-def as_grayscale_list(rgb_list):
-    return [
-        255 - ((red + green + blue) / 3)
-        for (red, green, blue, alpha)
-        in rgb_list
-    ]
-
-def as_28_by_28(grayscale_list):
-    return numpy.transpose(
-        numpy.reshape(grayscale_list, (28, 28))
-    )
-
-def flatten(image):
-    flattened_image = []
-
-    for row in image:
-        for gray_scale_val in row:
-            flattened_image.append(gray_scale_val)
-            
-    return flattened_image
 
 def adapt_for_prediction(img):
     rgb_list = img.getdata()
@@ -75,7 +55,6 @@ for (lowercase_chr, uppercase_chr) in characters_drawn_by_riley:
 images = []
 labels = []
 for (lowercase_chr, uppercase_chr) in characters_drawn_by_riley:
-    # pdb.set_trace()
     images.append(adapt_for_prediction(Image.open(
         '/Users/rileylittlefield/Desktop/classify_chars_ml/src/demo/riley-'
         + uppercase_chr +
