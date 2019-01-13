@@ -6,14 +6,25 @@
     - [x] report on data
 
     - [x] separate test from training data
-    - [ ] feature scale/normalize data
+    - [x] feature scale/normalize data
     
     - [x] produce sgd classifier
     - [x] rate sgd classifier
 
     - [x] produce random forest classifier
 
-    - [ ] produce neural network classifier
+    - [x] produce neural network classifier
     
-    - [ ] find hyperparameters for top 5 classifiers
-    - [ ] produce pipeline for creating classifier and ranking it's performance
+    - [x] create build pipeline for prepping data
+        * normalize grayscale vals
+        * smooth images
+    - [x] create build pipeline for decision tree that finds hyper parameter sets
+    - [x] create build pipeline for sgd classifier that finds hyper parameter sets
+    - [x] create build pipeline for mlp classifier that finds hyper parameter sets
+
+    - [x] evaluate classifiers on test set
+    - [x] scan my characters and demo / gets stats on performance
+    - [ ] evaluate performance on test set
+    - [ ] find character weaknesses of model on test set
+
+    - [ ] **DONE**
